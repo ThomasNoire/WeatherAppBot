@@ -61,7 +61,6 @@ def handle_city_input(message):
         markup.add(item1, item2)
 
         bot.send_message(message.chat.id, weather_info, reply_markup=markup)
-
 @bot.message_handler(func=lambda message: message.text == "Прогноз на завтра")
 def send_tomorrow_forecast(message):
     city = user_city.get(message.chat.id)
@@ -105,7 +104,6 @@ def send_5day_forecast(message):
     bot.send_message(message.chat.id, forecast_info)
 
 bot.polling(none_stop=True)
-
 
 
 
